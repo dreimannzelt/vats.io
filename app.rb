@@ -1,5 +1,14 @@
+require 'rubygems'
 require 'sinatra'
+
 require 'json'
+
+# set :haml, format: :html5
+
+
+get '/' do
+  erb :index
+end
 
 get '/names.json' do
   content_type 'application/json', charset: 'utf-8'

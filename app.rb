@@ -1,4 +1,5 @@
 require 'sinatra'
+require 'json'
 
 get '/names.json' do
   content_type 'application/json', charset: 'utf-8'

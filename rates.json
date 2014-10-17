@@ -1,0 +1,119 @@
+
+{
+  at: {
+    standard: 20
+    reduced: [12, 10]
+  },
+  be: {
+    standard: 21,
+    reduced: [12, 6]
+  },
+  bg: {
+    standard: 20,
+    reduced: 9
+  },
+  cy: {
+    standard: 19,
+    reduced: [9, 5]
+  },
+  cz: {
+    standard: 21,
+    reduced: 15
+  },
+  cr: {
+    standard: 25,
+    reduced: 10
+  },
+  dk: {
+    standard: 25,
+    reduced: nil
+  },
+  ee: {
+    standard: 20,
+    reduced: 9
+  },
+  fi: {
+    standard: 24,
+    reduced: [14, 10]
+  },
+  fr: {
+    standard: 20,
+    reduced: [10, 5.5, 2.1]
+  },
+  de: {
+    standard: 19,
+    reduced: 7
+  },
+  gr: {
+    standard: 23,
+    reduced: [13, 6.5]
+  },
+  hu: {
+    standard: 23,
+    reduced: [18, 5]
+  },
+  ir: {
+    standard: 23,
+    reduced: [13.5, 9, 5, 4.8, 0]
+  },
+  it: {
+    standard: 22,
+    reduced: [10, 4]
+  },
+  lv: {
+    standard: 21,
+    reduced: 12
+  },
+  lt: {
+    standard: 21,
+    reduced: [9, 5]
+  },
+  lu: {
+    standard: 15,
+    reduced: [12, 9, 6, 3]
+  },
+  mt: {
+    standard: 18,
+    reduced: [7, 5, 0]
+  },
+  nl: {
+    standard: 21,
+    reduced: 6
+  },
+  pl: {
+    standard: 23,
+    reduced: [8, 5]
+  },
+  pt: {
+    standard: 23,
+    reduced: [13, 6]
+  },
+  ro: {
+    standard: 24,
+    reduced: [9, 5]
+  },
+  sk: {
+    standard: 20,
+    reduced: 10
+  },
+  sl: {
+    standard: 22,
+    reduced: 9.5
+  },
+  es: {
+    standard: 21,
+    reduced: [10, 4]
+  },
+  ic: {
+    standard: 7,
+    reduced: [0, 2]
+  },
+  se: {
+    standard: 25,
+    reduced: [12, 6]
+  },
+  gb: {
+    standard: 20,
+    reduced: [5, 0]
+  }
+}

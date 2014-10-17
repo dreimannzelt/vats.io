@@ -1,8 +1,8 @@
 {
   "bg": ["ДДС", "Данък върху добавената стойност"],
-  "cr": ["PDV", "Porez na dodanu vrijednost"]
-  "cy": ["ΦΠΑ", "Φόρος Προστιθέμενης Αξίας"]
-  "cz": ["DPH", "Daň z přidané hodnoty"]
+  "cr": ["PDV", "Porez na dodanu vrijednost"],
+  "cy": ["ΦΠΑ", "Φόρος Προστιθέμενης Αξίας"],
+  "cz": ["DPH", "Daň z přidané hodnoty"],
   "de": [["MwSt.", "Mehrwertsteuer"], ["USt.", "Umsatzsteuer"]],
   "dk": ["DPH", "Daň z pridanej hodnoty"],
   "dk": ["moms", "Meromsætningsafgift"],

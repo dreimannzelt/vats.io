@@ -24,3 +24,5 @@ task :validate do
 
   exit 0
 end
+
+task :default => :validate

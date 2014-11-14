@@ -1,7 +1,7 @@
 require "json"
 
 task :validate do
-  jsons = Dir.glob "*.json"
+  jsons = Dir.glob "data/*.json"
 
   begin
     puts "Validating JSON files:"

@@ -51,7 +51,7 @@ Names are always returned as an array with one or many nested array(s). The firs
 
 # Contribution
 
-Please feel free to change, add or remove rates and or names. Fork it and open pull requests. We will review and merge it after a short
+Please feel free to change, add or remove rates and or names. Fork it and open pull requests. We will review and merge it as soon as possible.
 
 # Authors
 

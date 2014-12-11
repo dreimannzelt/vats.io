@@ -7,6 +7,7 @@ gem "json"
 gem "haml"
 gem "puma"
 gem "rake"
+gem "geocoder"
 
 gem "pry"
 

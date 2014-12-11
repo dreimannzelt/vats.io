@@ -6,6 +6,7 @@ GEM
     coderay (1.1.0)
     ffi (1.9.6)
     formatador (0.2.5)
+    geocoder (1.2.6)
     guard (2.10.2)
       formatador (>= 0.2.4)
       listen (~> 2.7)
@@ -58,6 +59,7 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
+  geocoder
   guard
   guard-bundler
   guard-shell

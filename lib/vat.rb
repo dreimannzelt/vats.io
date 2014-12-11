@@ -1,7 +1,7 @@
 require 'json'
 
 class Vat
-  attr_accessor :locale, :rates, :names
+  attr_accessor :code, :rates, :names
 
   class << self
     def rates
@@ -12,8 +12,8 @@ class Vat
       JSON.parse( File.read "data/names.json" )
     end
 
-    def from_locale(locale)
-      self.new(locale)
+    def from_code(code)
+      self.new(code)
     end
   end
 
@@ -21,10 +21,10 @@ class Vat
   # ----
   #
 
-  def initialize(locale)
-    @locale = locale
-    @rates = self.class.rates[locale]
-    @names = self.class.names[locale] || self.class.names["de"]
+  def initialize(code)
+    @code = code
+    @rates = self.class.rates[code]
+    @names = self.class.names[code] || self.class.names["de"]
   end
 
   def rate
@@ -42,11 +42,10 @@ class Vat
 
   def to_json(options)
     {
+      code: code,
       abbr: abbr,
       name: name,
-      rate: rate,
-      rates: rates,
-      names: names
+      rate: rate
     }.to_json
   end
 end

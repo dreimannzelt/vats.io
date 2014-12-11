@@ -12,18 +12,18 @@ get '/' do
   erb :index
 end
 
-get '/rates/:locale/:locale_to/:amount' do
+get '/rates/:origin_code/:target_code/:amount' do
   content_type 'application/json', charset: 'utf-8'
 
   params[:net] ||= "true"
   params[:needs_net] ||= "false"
 
-  is_net = (params[:net] == "true")
-  needs_net = (params[:needs_net] == "true")
+  is_net    = ( params[:net] == "true" )
+  needs_net = ( params[:needs_net] == "true" )
 
-  vat_from = Vat.from_locale(params[:locale])
-  vat_to     = Vat.from_locale(params[:locale_to])
-  amount = params[:amount].to_f
+  vat_from  = Vat.from_code( params[:origin_code] )
+  vat_to    = Vat.from_code( params[:target_code] )
+  amount    = params[:amount].to_f
 
   net = is_net ?
     (amount) :
@@ -49,6 +49,13 @@ get '/rates/:locale/:locale_to/:amount' do
     vats: {
       from: vat_from,
       to: vat_to
+    },
+    _parameters: {
+      origin_code: params[:origin_code],
+      target_code: params[:target_code],
+      amount: params[:amount],
+      is_net: is_net,
+      needs_net: needs_net
     }
   }.to_json
 end
@@ -58,9 +65,9 @@ get '/rates.json' do
   Vat.rates.to_json
 end
 
-get '/rates/:locale.json' do
+get '/rates/:code.json' do
   content_type 'application/json', charset: 'utf-8'
-  Vat.rates[ params[:locale] ].to_json
+  Vat.rates[ params[:code] ].to_json
 end
 
 get '/names.json' do

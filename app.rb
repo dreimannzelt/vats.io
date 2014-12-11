@@ -1,7 +1,7 @@
 require 'rubygems'
 require 'sinatra'
 
-require './lib/vat.rb'
+Dir.glob("./lib/*.rb").each { |f| require f }
 
 
 #
@@ -17,38 +17,24 @@ get '/rates/:origin_code/:target_code/:amount' do
 
   params[:net] ||= "true"
   params[:needs_net] ||= "false"
-
   is_net    = ( params[:net] == "true" )
   needs_net = ( params[:needs_net] == "true" )
 
-  vat_from  = Vat.from_code( params[:origin_code] )
-  vat_to    = Vat.from_code( params[:target_code] )
-  amount    = params[:amount].to_f
-
-  net = is_net ?
-    (amount) :
-    (amount / (100 + vat_from.rate) * 100)
-
-  gross = is_net ?
-    (amount * (100 + vat_to.rate) / 100) :
-    (amount / (100 + vat_from.rate) * (100 + vat_to.rate))
-
-  amount = needs_net ?
-    (net) :
-    (gross)
-
-  vat_amount = is_net ?
-    (gross - net) :
-    (gross - net)
+  conversion = Conversion.new(
+    params[:origin_code],
+    params[:target_code],
+    params[:amount],
+    {is_net: is_net, needs_net: needs_net}
+  )
 
   {
-    net: net.round(2),
-    gross: gross.round(2),
-    amount: amount.round(2),
-    vat_amount: vat_amount.round(2),
+    net: conversion.net,
+    gross: conversion.gross,
+    amount: conversion.amount,
+    vat_amount: conversion.vat_amount,
     vats: {
-      from: vat_from,
-      to: vat_to
+      from: conversion.from,
+      to: conversion.to
     },
     _parameters: {
       origin_code: params[:origin_code],

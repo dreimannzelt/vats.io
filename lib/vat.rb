@@ -28,7 +28,7 @@ class Vat
   end
 
   def rate
-    rates["standard"].to_f
+    rates["standard"]
   end
 
   def abbr

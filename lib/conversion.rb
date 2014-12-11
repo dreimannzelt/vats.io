@@ -57,4 +57,21 @@ class Conversion
   def needs_net?
     options[:needs_net]
   end
+
+  def as_json(options={})
+    {
+      net: self.net,
+      gross: self.gross,
+      amount: self.amount,
+      vat_amount: self.vat_amount,
+      vats: {
+        from: self.from,
+        to: self.to
+      }
+    }
+  end
+
+  def to_json(options)
+    as_json.to_json
+  end
 end

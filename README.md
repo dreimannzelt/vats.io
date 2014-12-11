@@ -50,48 +50,24 @@ JSON:
   "vat_amount": 20.0,
   "vats": {
     "from": {
+      "code": "de",
       "abbr": "MwSt.",
       "name": "Mehrwertsteuer",
-      "rate": 19.0,
-      "rates": {
-        "standard": 19,
-        "reduced": [
-          7
-        ]
-      },
-      "names": [
-        [
-          "MwSt.",
-          "Mehrwertsteuer"
-        ],
-        [
-          "USt.",
-          "Umsatzsteuer"
-        ]
-      ]
+      "rate": 19.0
     },
     "to": {
+      "code": "at",
       "abbr": "MwSt.",
       "name": "Mehrwertsteuer",
-      "rate": 20.0,
-      "rates": {
-        "standard": 20,
-        "reduced": [
-          12,
-          10
-        ]
-      },
-      "names": [
-        [
-          "MwSt.",
-          "Mehrwertsteuer"
-        ],
-        [
-          "USt.",
-          "Umsatzsteuer"
-        ]
-      ]
+      "rate": 20.0
     }
+  },
+  "_parameters": {
+    "origin_code": "de",
+    "target_code": "at",
+    "amount": "100",
+    "is_net": true,
+    "needs_net": false
   }
 }
 ```

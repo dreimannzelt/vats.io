@@ -3,7 +3,7 @@ guard 'bundler' do
 end
 
 guard 'shell' do
-  watch(%r{app.rb|lib/vat.rb}) do
+  watch(%r{app.rb|lib/.*.rb}) do
     Notifier.notify "Reloading application code", title: "VATS.io"
     `touch tmp/restart.txt`
   end

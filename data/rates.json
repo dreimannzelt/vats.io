@@ -13,7 +13,7 @@
   },
   "cy": {
     "standard": 19,
-    "reduced": [9, 5]
+    "reduced": [8, 5]
   },
   "cz": {
     "standard": 21,
@@ -21,7 +21,7 @@
   },
   "cr": {
     "standard": 25,
-    "reduced": [10]
+    "reduced": [13]
   },
   "dk": {
     "standard": 25,
@@ -73,7 +73,7 @@
   },
   "mt": {
     "standard": 18,
-    "reduced": [7, 5, 0]
+    "reduced": [5, 0]
   },
   "nl": {
     "standard": 21,
@@ -102,10 +102,6 @@
   "es": {
     "standard": 21,
     "reduced": [10, 4]
-  },
-  "ic": {
-    "standard": 7,
-    "reduced": [0, 2]
   },
   "se": {
     "standard": 25,

@@ -4,7 +4,7 @@ GEM
     celluloid (0.16.0)
       timers (~> 4.0.0)
     coderay (1.1.0)
-    ffi (1.9.6)
+    ffi (1.12.2)
     formatador (0.2.5)
     geocoder (1.2.6)
     guard (2.10.2)
